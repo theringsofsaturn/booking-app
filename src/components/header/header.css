@@ -41,3 +41,12 @@
   padding: 10px;
   cursor: pointer;
 }
+
+.headerSearch {
+  height: 30px;
+  background-color: white;
+  border: 3px solid rgb(37, 171, 186);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
