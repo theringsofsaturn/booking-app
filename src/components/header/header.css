@@ -28,3 +28,16 @@
   padding: 10px;
   border-radius: 15px;
 }
+
+.headerDesc {
+  margin: 20px 0px;
+}
+
+.headerButton {
+  background-color: rgb(37, 171, 186);
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}

@@ -34,6 +34,13 @@ const Header = () => {
             <span>Atractions</span>
           </div>
         </div>
+        <h1 className="headerTitle">
+          Flash sale on now! Get 30% off until Sunday, online at Saturn Travel.
+        </h1>
+        <p className="headerDesc">
+          Book the best Hotels for your vacation with cheap prices!
+        </p>
+        <button className="headerButton">Sign in / Register</button>
       </div>
     </div>
   );
