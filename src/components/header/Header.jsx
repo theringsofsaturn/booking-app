@@ -26,7 +26,21 @@ const Header = () => {
   ]);
 
   const [openOptions, setOpenOptions] = useState(false);
-  const [options, setOptions] = useState({ adult: 1, children: 0, room: 1 });
+  const [options, setOptions] = useState({
+    adult: 1,
+    children: 0,
+    room: 1,
+  });
+
+  const handleOption = (name, operation) => {
+    setOptions((prev) => {
+      return {
+        ...prev,
+        [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
+      };
+    });
+  }; // whenever we click the option buttons, it will take the previous state as it is (inital state of our "options" object), then will find the name passed in,  and add or subtract 1 to the name value (adult, children, room), based on the operation - i for increment, d for decrement
+
   return (
     <div className="header">
       <div className="headerContainer">
@@ -97,27 +111,57 @@ const Header = () => {
               <div className="optionItem">
                 <span className="optionText">Adult</span>
                 <div className="optionCounter">
-                  <button className="optionCounterButton">-</button>
+                  <button
+                    className="optionCounterButton"
+                    onClick={() => handleOption("adult", "d")}
+                  >
+                    -
+                  </button>
                   <span className="optionCounterNumber">1</span>
-                  <button className="optionCounterButton">+</button>
+                  <button
+                    className="optionCounterButton"
+                    onClick={() => handleOption("adult", "i")}
+                  >
+                    +
+                  </button>
                 </div>
               </div>
 
               <div className="optionItem">
                 <span className="optionText">Children</span>
                 <div className="optionCounter">
-                  <button className="optionCounterButton">-</button>
+                  <button
+                    className="optionCounterButton"
+                    onClick={() => handleOption("children", "d")}
+                  >
+                    -
+                  </button>
                   <span className="optionCounterNumber">0</span>
-                  <button className="optionCounterButton">+</button>
+                  <button
+                    className="optionCounterButton"
+                    onClick={() => handleOption("children", "i")}
+                  >
+                    +
+                  </button>
                 </div>
               </div>
 
               <div className="optionItem">
                 <span className="optionText">Room</span>
                 <div className="optionCounter">
-                  <button className="optionCounterButton">-</button>
+                  <button
+                    className="optionCounterButton"
+                    onClick={() => handleOption("room", "d")}
+                  >
+                    -
+                  </button>
                   <span className="optionCounterNumber">1</span>
-                  <button className="optionCounterButton">+</button>
+                  <button
+                    className="optionCounterButton"
+                    onClick={() => handleOption("room", "i")}
+                  >
+                    +
+                  </button>
                 </div>
               </div>
             </div>
