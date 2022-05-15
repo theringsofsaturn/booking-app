@@ -107,3 +107,11 @@
   font-size: 12 px;
   color: black;
 }
+
+.optionCounterButton {
+  width: 30px;
+  height: 30px;
+  border: solid 1px rgb(37, 171, 186);
+  color: rgb(37, 171, 186);
+  background-color: #fff;
+}
