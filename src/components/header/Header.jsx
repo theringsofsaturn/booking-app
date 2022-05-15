@@ -39,7 +39,7 @@ const Header = () => {
         [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
       };
     });
-  }; // whenever we click the option buttons, it will take the previous state as it is (inital state of our "options" object), then will find the name passed in,  and add or subtract 1 to the name value (adult, children, room), based on the operation - i for increment, d for decrement
+  }; // whenever we click the options buttons, it will take the previous state as it is (inital state of our "options" object), then will find the name passed in,  and add or subtract 1 to the name value (adult, children, room), based on the operation - i for increment, d for decrement
 
   return (
     <div className="header">
