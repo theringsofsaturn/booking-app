@@ -36,10 +36,11 @@ const Header = () => {
     setOptions((prev) => {
       return {
         ...prev,
+        //  if you write the name inside the array, it will find their name in the object
         [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
       };
     });
-  }; // whenever we click the options buttons, it will take the previous state as it is (inital state of our "options" object), then will find the name passed in,  and add or subtract 1 to the name value (adult, children, room), based on the operation - i for increment, d for decrement
+  }; // whenever we click the options buttons, it will take the previous state as it is (inital state of our "options" object), then will find the name passed in, and add or subtract 1 to the name value (adult, children, room), based on the operation - i for increment, d for decrement
 
   return (
     <div className="header">
@@ -117,7 +118,7 @@ const Header = () => {
                   >
                     -
                   </button>
-                  <span className="optionCounterNumber">1</span>
+                  <span className="optionCounterNumber">{options.adult}</span>
                   <button
                     className="optionCounterButton"
                     onClick={() => handleOption("adult", "i")}
@@ -136,7 +137,9 @@ const Header = () => {
                   >
                     -
                   </button>
-                  <span className="optionCounterNumber">0</span>
+                  <span className="optionCounterNumber">
+                    {options.children}
+                  </span>
                   <button
                     className="optionCounterButton"
                     onClick={() => handleOption("children", "i")}
@@ -155,7 +158,7 @@ const Header = () => {
                   >
                     -
                   </button>
-                  <span className="optionCounterNumber">1</span>
+                  <span className="optionCounterNumber">{options.room}</span>
                   <button
                     className="optionCounterButton"
                     onClick={() => handleOption("room", "i")}
