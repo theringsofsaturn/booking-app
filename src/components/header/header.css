@@ -115,3 +115,7 @@
   color: rgb(37, 171, 186);
   background-color: #fff;
 }
+
+.optionCounterButton:disabled {
+  cursor: not-allowed;
+}
