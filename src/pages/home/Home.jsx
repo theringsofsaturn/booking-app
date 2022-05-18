@@ -1,5 +1,5 @@
 import Header from "../../components/header/Header";
-import { Navbar } from "../../components/Navbar";
+import Navbar from "../../components/Navbar";
 import "./home.css";
 
 const Home = () => {
